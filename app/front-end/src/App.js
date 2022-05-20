@@ -12,7 +12,6 @@ function App() {
       setTasks(res.data)
     });
   }, []);
-  console.log(tasks)
   
   return (
     <div className="App">
