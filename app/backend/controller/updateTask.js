@@ -4,7 +4,6 @@ module.exports = async (req, res) => {
     try {
         const { descricao, status } = req.body;
         const { id } = req.params;
-
         const task = await updateTask(descricao, status, id);
         
         if (!task) throw Error;

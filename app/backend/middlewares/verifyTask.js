@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
       return res.status(400).json({ message: '"status" is required' });
     }
 
-    if (status !== 'pendente' && status !== 'em andamento' && status !== 'pronto') {
+    if (status !== 'Pendente' && status !== 'Em andamento' && status !== 'Pronto') {
       return res.status(400).
         json({ message: '"status" deve ser: pendente, em andamento ou pronto' });
     }

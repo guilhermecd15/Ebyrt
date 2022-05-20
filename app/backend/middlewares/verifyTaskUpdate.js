@@ -2,11 +2,9 @@ module.exports = async (req, res, next) => {
   try {
     const { status } = req.body;
 
-    if (!status) return next();
-
-    if (status !== 'pendente' && status !== 'em andamento' && status !== 'pronto') {
+    if (status !== 'Pendente' && status !== 'Em andamento' && status !== 'Pronto') {
       return res.status(400).
-        json({ message: '"status" deve ser: pendente, em andamento ou pronto' });
+        json({ message: '"status" deve ser: Pendente, Em andamento ou Pronto' });
     }
 
     next();
